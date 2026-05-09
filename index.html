@@ -9,13 +9,17 @@
   <meta property="og:description" content="Soft, romantic, atmospheric photography rooted in emotion, light, and quiet storytelling.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://cjblackthorn.github.io/petals-and-frames/">
+  <link rel="icon" href="assets/images/branding/petal-frame-logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/css/petals-and-frames.css">
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="Petal & Frame home">
-      <span class="brand-title">Petal &amp; Frame</span>
-      <span class="brand-subtitle">Photography</span>
+      <img class="brand-logo" src="assets/images/branding/petal-frame-logo.svg" alt="Petal & Frame logo">
+      <span class="brand-wordmark">
+        <span class="brand-title">Petal &amp; Frame</span>
+        <span class="brand-subtitle">Photography</span>
+      </span>
     </a>
     <nav class="site-nav" aria-label="Primary navigation">
       <a href="index.html">Home</a>
@@ -37,7 +41,8 @@
           <a class="button button-soft" href="contact.html">Book a Session</a>
         </div>
       </div>
-      <div class="hero-art" role="img" aria-label="Soft rose and cream abstract photography placeholder">
+      <div class="hero-art hero-logo-card" role="img" aria-label="Petal & Frame logo mark">
+        <img src="assets/images/branding/petal-frame-logo.svg" alt="Petal & Frame logo mark">
         <span>Portfolio images coming soon</span>
       </div>
     </section>
@@ -91,6 +96,7 @@
   </main>
 
   <footer class="site-footer">
+    <div class="footer-brand"><img class="footer-logo" src="assets/images/branding/petal-frame-logo.svg" alt="Petal & Frame logo"></div>
     <p>&copy; <span id="year"></span> Petal &amp; Frame Photography by C. J. Blackthorn.</p>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
