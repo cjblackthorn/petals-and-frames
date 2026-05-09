@@ -5,65 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portfolio | Petal & Frame Photography</title>
   <meta name="description" content="Atmospheric portrait, floral, landscape, and fine art photography portfolio.">
+  <link rel="icon" href="assets/images/branding/petal-frame-logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/css/petals-and-frames.css">
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="index.html">
-      <span class="brand-title">Petal &amp; Frame</span>
-      <span class="brand-subtitle">Photography</span>
+      <img class="brand-logo" src="assets/images/branding/petal-frame-logo.svg" alt="Petal & Frame logo">
+      <span class="brand-wordmark">
+        <span class="brand-title">Petal &amp; Frame</span>
+        <span class="brand-subtitle">Photography</span>
+      </span>
     </a>
     <nav class="site-nav">
       <a href="index.html">Home</a>
       <a href="portfolio.html">Portfolio</a>
+      <a href="sessions.html">Sessions</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main class="page-shell">
-    <section class="page-hero">
+    <section class="page-hero portfolio-hero">
       <p class="section-kicker">Portfolio</p>
       <h1>Atmosphere before perfection.</h1>
-      <p>The portfolio is being curated intentionally to preserve emotional cohesion, softness, mood, weather, and visual storytelling.</p>
+      <p>The gallery system is now structured and ready for full-resolution uploads. Images will automatically populate from the <code>./_gallery/</code> folder structure.</p>
     </section>
 
-    <section class="page-grid">
-      <article class="portfolio-card">
-        <h3>Portraits</h3>
-        <p>Natural light portraits with soft movement, reflective emotion, and quiet intimacy.</p>
-      </article>
-
-      <article class="portfolio-card">
-        <h3>Florals &amp; Details</h3>
-        <p>Macro textures, petals, insects, blossoms, and small moments that feel suspended in time.</p>
-      </article>
-
-      <article class="portfolio-card">
-        <h3>Atmospheric Landscapes</h3>
-        <p>Fog, water, sunsets, roads, coastlines, and skies carrying emotional weight.</p>
-      </article>
-
-      <article class="portfolio-card">
-        <h3>Fine Art &amp; Abstract</h3>
-        <p>Jellyfish, reflections, silhouettes, movement, layered light, and visual abstraction.</p>
-      </article>
-
-      <article class="portfolio-card">
-        <h3>Pacific Northwest</h3>
-        <p>Quiet Oregon landscapes, weather transitions, rural roads, and cinematic natural light.</p>
-      </article>
-
-      <article class="portfolio-card">
-        <h3>Editorial &amp; Lifestyle</h3>
-        <p>Visual storytelling with gentle direction and understated cinematic framing.</p>
-      </article>
+    <section class="portfolio-system-note">
+      <div>
+        <p class="card-kicker">Gallery structure</p>
+        <h2>Built for bulk upload later.</h2>
+        <p>Categories, placeholders, responsive layouts, and image paths are already wired. Once the photos are uploaded into the matching folders, the site will begin rendering the real portfolio automatically.</p>
+      </div>
     </section>
+
+    <section class="gallery-filter-bar" data-gallery-filters aria-label="Gallery category filters"></section>
+
+    <section class="gallery-grid" data-gallery aria-label="Photography portfolio gallery"></section>
   </main>
 
   <footer class="site-footer">
+    <div class="footer-brand"><img class="footer-logo" src="assets/images/branding/petal-frame-logo.svg" alt="Petal & Frame logo"></div>
     <p>&copy; <span id="year"></span> Petal &amp; Frame Photography.</p>
   </footer>
+
+  <script src="assets/js/gallery.js"></script>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
