@@ -1,0 +1,247 @@
+[
+  {
+    "category": "portraits-snow",
+    "file": "snow-burgundy-wide-negative-space.jpg",
+    "source": "D10E6A63-6882-4712-999E-CDEFD375B43C.jpeg",
+    "caption": "Burgundy dress portrait in snow with strong negative space.",
+    "status": "included"
+  },
+  {
+    "category": "portraits-snow",
+    "file": "snow-burgundy-smiling-close.jpg",
+    "source": "1A2BB1D4-FF97-46B9-AC28-6D1D4215ED2D.jpeg",
+    "caption": "Smiling winter portrait, approachable and warm.",
+    "status": "included"
+  },
+  {
+    "category": "portraits-snow",
+    "file": "snow-burgundy-ballet-stance.jpg",
+    "source": "31FE5F4A-4C81-45B1-947E-709CD1A855E6.jpeg",
+    "caption": "Burgundy dress ballet pose in snow.",
+    "status": "included"
+  },
+  {
+    "category": "portraits-snow",
+    "file": "snow-floral-dress-romantic.jpg",
+    "source": "2CA607E9-E8DC-4CDD-AE6A-C3107DE3AAEF.jpeg",
+    "caption": "Soft floral dress portrait in snow.",
+    "status": "included"
+  },
+  {
+    "category": "portraits-blossoms",
+    "file": "cherry-blossom-suit-full.jpg",
+    "source": "772289FC-DB33-42DC-82B4-6C87072F0B7C.jpeg",
+    "caption": "Editorial portrait under cherry blossoms.",
+    "status": "included"
+  },
+  {
+    "category": "portraits-blossoms",
+    "file": "cherry-blossom-suit-profile.jpg",
+    "source": "8B8EF188-A8DE-49AE-A4F0-336EA52942EE.jpeg",
+    "caption": "Profile portrait with tailoring and spring blossoms.",
+    "status": "included"
+  },
+  {
+    "category": "portraits-blossoms",
+    "file": "white-dress-blossom-reaching.jpg",
+    "source": "0F469FB1-714B-461D-A42D-A3A8BB99EEFC.jpeg",
+    "caption": "White dress portrait reaching toward blossoms.",
+    "status": "included"
+  },
+  {
+    "category": "portraits-blossoms",
+    "file": "white-dress-blossom-close.jpg",
+    "source": "888F1804-869D-4831-AABC-B908258CB4D8.jpeg",
+    "caption": "Soft blossom portrait with partial face cover.",
+    "status": "included"
+  },
+  {
+    "category": "landscapes-coast",
+    "file": "oregon-coast-muted-haystack.jpg",
+    "source": "6221A8B7-1F41-45F7-9D20-FEFD353BB7CB.jpeg",
+    "caption": "Muted Oregon coast scene with sea stack and figures.",
+    "status": "included"
+  },
+  {
+    "category": "landscapes-coast",
+    "file": "haystack-rock-dramatic-sky.jpg",
+    "source": "81698B5C-5A1F-458A-B271-E034186E79F8.jpeg",
+    "caption": "Dramatic cloudscape over Haystack Rock.",
+    "status": "included"
+  },
+  {
+    "category": "landscapes-coast",
+    "file": "oregon-coast-sunset-gray-fire.jpg",
+    "source": "6EC91632-FC23-447B-8FE3-774FE0AB80A6.jpeg",
+    "caption": "Restrained Oregon coast sunset with gray sky and ember horizon.",
+    "status": "included"
+  },
+  {
+    "category": "landscapes-coast",
+    "file": "driftwood-root-beach-detail.jpg",
+    "source": "D71586D4-297E-4F91-A1B2-13AF14AA9DB3.jpeg",
+    "caption": "Sculptural driftwood and beach texture.",
+    "status": "included"
+  },
+  {
+    "category": "landscapes-mountains",
+    "file": "frozen-mountain-lake-cinematic.jpg",
+    "source": "6E1A7435-4C99-42C1-A494-3C8CCA3FD1C2.jpeg",
+    "caption": "Frozen mountain lake with cinematic depth.",
+    "status": "included"
+  },
+  {
+    "category": "landscapes-mountains",
+    "file": "fog-covered-mountain-range.jpg",
+    "source": "1CD237FE-C401-4470-B262-CF8D5BCE6523.jpeg",
+    "caption": "Fog-covered mountain range with layered atmosphere.",
+    "status": "included"
+  },
+  {
+    "category": "landscapes-mountains",
+    "file": "crater-lake-blue-framed.jpg",
+    "source": "CC5B6972-F250-4203-8C68-2CC5498476BB.jpeg",
+    "caption": "Crater Lake view framed by evergreens.",
+    "status": "included"
+  },
+  {
+    "category": "wetlands-water",
+    "file": "stormy-wetlands-reflection.jpg",
+    "source": "589E20AC-9AAC-4C37-B46E-E631169847CC.jpeg",
+    "caption": "Stormy wetlands with mirrored sky.",
+    "status": "included"
+  },
+  {
+    "category": "wetlands-water",
+    "file": "wetlands-panorama-storm-clouds.jpg",
+    "source": "78ECCE4C-A221-48A3-9617-C9DDD427251A.jpeg",
+    "caption": "Wide wetland panorama under heavy clouds.",
+    "status": "included"
+  },
+  {
+    "category": "wetlands-water",
+    "file": "geese-sunset-family-line.jpg",
+    "source": "23F37386-28A7-4175-96D6-FA632DA95C91.jpeg",
+    "caption": "Geese crossing reflected sunset light.",
+    "status": "included"
+  },
+  {
+    "category": "wetlands-water",
+    "file": "lake-silhouette-tree-tiny-people.jpg",
+    "source": "B66670AB-B16B-466F-B927-EB08E33A79A9.jpeg",
+    "caption": "Silhouetted tree, lake, and small figures at sunset.",
+    "status": "included"
+  },
+  {
+    "category": "wetlands-water",
+    "file": "quiet-lake-boathouse-sunset.jpg",
+    "source": "99EAA1B5-DEE6-4EC6-B3FE-AE4F46070B35.jpeg",
+    "caption": "Quiet lake with boathouse and muted sunset.",
+    "status": "included"
+  },
+  {
+    "category": "roads-thresholds",
+    "file": "road-sunset-wet-powerlines.jpg",
+    "source": "A9685414-442C-4E8A-BA14-A5ABF072F41A.jpeg",
+    "caption": "Road-at-sunset scene with power lines and wet pavement mood.",
+    "status": "included"
+  },
+  {
+    "category": "roads-thresholds",
+    "file": "road-dusk-dashboard-reflection.jpg",
+    "source": "62BAF621-2EFF-4CDF-AF7A-75C5650BADC8.jpeg",
+    "caption": "Dusk road image with dashboard reflection.",
+    "status": "included"
+  },
+  {
+    "category": "roads-thresholds",
+    "file": "birds-at-dusk-silhouette.jpg",
+    "source": "4A158573-8728-46C3-B028-DA69EB92228F.jpeg",
+    "caption": "Bird silhouettes over a warm twilight gradient.",
+    "status": "included"
+  },
+  {
+    "category": "roads-thresholds",
+    "file": "oak-tree-pastel-sunset.jpg",
+    "source": "9FBCE7AF-F2D7-4E28-93DF-AB6E7AEDE9E9.jpeg",
+    "caption": "Oak silhouette against pastel sunset.",
+    "status": "included"
+  },
+  {
+    "category": "roads-thresholds",
+    "file": "rural-sunset-barn-pink-sky.jpg",
+    "source": "C4F11D91-4064-425C-A419-16C113171E35.jpeg",
+    "caption": "Rural sunset with barn, trees, and vivid cloud color.",
+    "status": "included"
+  },
+  {
+    "category": "roads-thresholds",
+    "file": "dark-cloud-texture-sunset.jpg",
+    "source": "7ED6ECA6-9185-401F-AE6F-B33752B8C811.jpeg",
+    "caption": "Dark textured clouds glowing after sunset.",
+    "status": "included"
+  },
+  {
+    "category": "aquarium-abstracts",
+    "file": "jellyfish-blue-negative-space.jpg",
+    "source": "71D85A2C-FF66-4990-AB4E-94218B87B239.jpeg",
+    "caption": "Blue jellyfish field with negative space.",
+    "status": "included"
+  },
+  {
+    "category": "aquarium-abstracts",
+    "file": "jellyfish-magenta-art-print.jpg",
+    "source": "42E0C12B-A0CF-42D6-9882-F94439635DA4.jpeg",
+    "caption": "Magenta jellyfish close-up with art-print quality.",
+    "status": "included"
+  },
+  {
+    "category": "aquarium-abstracts",
+    "file": "jellyfish-blue-linework.jpg",
+    "source": "1D2EECDE-5983-4A3A-B721-CA56692C12EF.jpeg",
+    "caption": "Jellyfish cluster with graphic linework.",
+    "status": "included"
+  },
+  {
+    "category": "aquarium-abstracts",
+    "file": "jellyfish-monochrome-blue-density.jpg",
+    "source": "2D5EC1D6-25F5-43E0-BAE0-69CE6831AF2F.jpeg",
+    "caption": "Dense monochrome blue jellyfish composition.",
+    "status": "included"
+  },
+  {
+    "category": "florals-details",
+    "file": "pink-rose-bee-backlit.jpg",
+    "source": "9FA35599-2578-4BF5-B8C3-9BFEB729E4A7.jpeg",
+    "caption": "Backlit pink rose with bee.",
+    "status": "included"
+  },
+  {
+    "category": "florals-details",
+    "file": "red-roses-garden.jpg",
+    "source": "D1F3CEF2-9928-4A3E-BA84-6DF135B160D8.jpeg",
+    "caption": "Red roses in garden, secondary floral piece.",
+    "status": "included"
+  },
+  {
+    "category": "editorial-places",
+    "file": "rooftop-hot-tub-dusk-editorial.jpg",
+    "source": "32C08E21-D88C-48F7-9F1A-02252F134CC7.jpeg",
+    "caption": "Rooftop hot tub at dusk, editorial/lifestyle feel.",
+    "status": "included"
+  },
+  {
+    "category": "editorial-places",
+    "file": "purple-victorian-house.jpg",
+    "source": "EB2E9BC5-9876-4493-B1CF-F18C1EDC2458.jpeg",
+    "caption": "Colorful Pacific Northwest Victorian house.",
+    "status": "included"
+  },
+  {
+    "category": "editorial-places",
+    "file": "abstract-sculpture-forest.jpg",
+    "source": "C40C4FF7-D0A5-4DCA-8733-76AAA6CAFC10.jpeg",
+    "caption": "Abstract sculpture in forest setting.",
+    "status": "included"
+  }
+]
