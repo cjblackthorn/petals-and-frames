@@ -5,17 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About | Petal & Frame Photography</title>
   <meta name="description" content="About Petal & Frame Photography and the atmospheric visual style behind the work.">
+  <link rel="icon" href="assets/images/branding/petal-frame-logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/css/petals-and-frames.css">
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="index.html">
-      <span class="brand-title">Petal &amp; Frame</span>
-      <span class="brand-subtitle">Photography</span>
+      <img class="brand-logo" src="assets/images/branding/petal-frame-logo.svg" alt="Petal & Frame logo">
+      <span class="brand-wordmark">
+        <span class="brand-title">Petal &amp; Frame</span>
+        <span class="brand-subtitle">Photography</span>
+      </span>
     </a>
     <nav class="site-nav">
       <a href="index.html">Home</a>
       <a href="portfolio.html">Portfolio</a>
+      <a href="sessions.html">Sessions</a>
+      <a href="pricing.html">Pricing</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </nav>
@@ -28,18 +34,42 @@
       <p>Petal &amp; Frame Photography is rooted in softness, transitional light, weather, reflection, and moments that feel emotionally lived-in instead of overly staged.</p>
     </section>
 
-    <section class="section-narrow" style="padding-bottom: 5rem;">
-      <p>The work focuses on natural movement, calm environments, and creating images that feel timeless instead of trend-driven. Much of the visual language comes from the Pacific Northwest: mist, coastlines, rain, layered skies, flowers, forests, and evenings that linger softly.</p>
+    <section class="pricing-details" style="padding-bottom:4rem;">
+      <article class="pricing-detail-card">
+        <p class="card-kicker">Visual Direction</p>
+        <h3>Atmosphere First</h3>
+        <p>The work focuses on natural movement, calm environments, and images that feel timeless instead of trend-driven. Mist, coastlines, rain, layered skies, flowers, forests, and quiet evenings heavily influence the visual language.</p>
+      </article>
 
-      <p>Rather than chasing perfection, Petal &amp; Frame leans into atmosphere, texture, softness, and emotional honesty. The goal is not simply to document how something looked, but to preserve how it felt to exist inside that moment.</p>
+      <article class="pricing-detail-card">
+        <p class="card-kicker">Creative Approach</p>
+        <h3>Gentle Collaboration</h3>
+        <p>Sessions are intended to feel relaxed, emotionally safe, and collaborative. Soft prompting and natural interaction matter more than rigid posing or forced performance.</p>
+      </article>
 
-      <p>The portfolio includes portraits, florals, landscapes, atmospheric imagery, fine art photography, and quiet editorial storytelling.</p>
+      <article class="pricing-detail-card">
+        <p class="card-kicker">Portfolio Focus</p>
+        <h3>Emotion & Memory</h3>
+        <p>The goal is not simply to preserve how something looked, but how it felt to exist inside that moment. Portraits, landscapes, florals, editorial storytelling, and atmospheric imagery all connect back to that idea.</p>
+      </article>
+    </section>
+
+    <section class="cta">
+      <p class="section-kicker">Ready to create together?</p>
+      <h2>Let’s make something quiet, cinematic, and honest.</h2>
+      <div class="hero-actions" style="justify-content:center;">
+        <a class="button" href="portfolio.html">View Portfolio</a>
+        <a class="button button-soft" href="contact.html">Start an Inquiry</a>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
+    <div class="footer-brand"><img class="footer-logo" src="assets/images/branding/petal-frame-logo.svg" alt="Petal & Frame logo"></div>
+    <p><a href="mailto:petalnframe@gmail.com?subject=Petal%20%26%20Frame%20Photography%20Inquiry">petalnframe@gmail.com</a></p>
     <p>&copy; <span id="year"></span> Petal &amp; Frame Photography.</p>
   </footer>
+
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
