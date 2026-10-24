@@ -1,0 +1,24 @@
+name: Validate Petal and Frame static site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  site-integrity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Validate pages, local links, assets and review disclosures
+        run: python3 scripts/validate_site.py
+      - name: Check gallery JavaScript syntax
+        run: node --check assets/js/gallery.js
