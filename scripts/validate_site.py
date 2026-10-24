@@ -5,6 +5,7 @@ from collections import Counter
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
+from xml.etree import ElementTree
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -78,6 +79,26 @@ def main():
 
     if not (ROOT / "CNAME").read_text(encoding="utf-8").strip():
         issues.append("CNAME missing or empty")
+
+    # Every published HTML page must have a matching canonical and sitemap entry.
+    site_root = "https://petalsnframes.art/"
+    expected_urls = []
+    for file in pages:
+        url = site_root + ("" if file.name == "index.html" else file.name)
+        expected_urls.append(url)
+        if f'<link rel="canonical" href="{url}">' not in file.read_text(encoding="utf-8"):
+            issues.append(f"{file.name}: incorrect or missing canonical URL")
+    robots = (ROOT / "robots.txt").read_text(encoding="utf-8")
+    if "Sitemap: https://petalsnframes.art/sitemap.xml" not in robots:
+        issues.append("robots.txt missing sitemap reference")
+    try:
+        root = ElementTree.parse(ROOT / "sitemap.xml").getroot()
+        ns = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
+        published = [item.text for item in root.findall(f"{ns}url/{ns}loc")]
+        if set(published) != set(expected_urls) or len(published) != len(expected_urls):
+            issues.append("Sitemap URLs differ from root HTML pages")
+    except (OSError, ElementTree.ParseError) as err:
+        issues.append(f"sitemap.xml is invalid: {err}")
 
     if issues:
         print("Static site checks FAILED:")
