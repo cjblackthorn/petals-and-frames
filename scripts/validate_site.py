@@ -4,6 +4,7 @@
 from collections import Counter
 from html.parser import HTMLParser
 from pathlib import Path
+import re
 from urllib.parse import unquote, urlsplit
 from xml.etree import ElementTree
 
@@ -54,6 +55,12 @@ def main():
             issues.append(f"{file.name}: expected one main element, found {page.mains}")
         if page.h1 != 1:
             issues.append(f"{file.name}: expected one h1, found {page.h1}")
+        markup = file.read_text(encoding="utf-8")
+        if not re.search(r'<a\s+class="skip-link"\s+href="#main-content">', markup):
+            issues.append(f"{file.name}: missing skip-to-content link")
+        if not re.search(r'<main\b[^>]*id="main-content"[^>]*tabindex="-1"', markup):
+            issues.append(f"{file.name}: missing focusable main landmark")
+
         dup = [k for k, n in Counter(page.ids).items() if n > 1]
         if dup:
             issues.append(f"{file.name}: duplicate IDs {dup}")
