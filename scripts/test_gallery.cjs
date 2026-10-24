@@ -17,7 +17,20 @@ async function testViewport(browser, mobile) {
   const dialog = page.locator(".lightbox");
   assert.equal(await dialog.getAttribute("aria-hidden"), "false");
   assert.equal(await page.locator(".lightbox-dialog").getAttribute("aria-modal"), "true");
-  await page.waitForFunction(() => document.activeElement?.matches(".lightbox-close"), { timeout: 3000 });
+  await page.waitForTimeout(600);
+  console.log("LIGHTBOX FOCUS DIAGNOSTIC", JSON.stringify(await page.evaluate(() => {
+    const el = document.querySelector(".lightbox-close");
+    return {
+      active: document.activeElement?.outerHTML.slice(0, 350),
+      hidden: document.querySelector(".lightbox")?.getAttribute("aria-hidden"),
+      display: getComputedStyle(el).display,
+      visibility: getComputedStyle(el).visibility,
+      rect: el.getBoundingClientRect().toJSON(),
+      tabIndex: el.tabIndex,
+      bodyClass: document.body.className,
+    };
+  })));
+  await page.waitForFunction(() => document.activeElement?.matches(".lightbox-close"), null, { timeout: 3000 });
   assert.equal(await page.locator(".lightbox-close").evaluate(el => document.activeElement === el), true);
   assert.equal(await page.locator(".lightbox-caption h3").innerText(), "Burgundy Snow Portrait");
 
