@@ -1,0 +1,54 @@
+name: Test Petal and Frame portfolio interactions
+
+on:
+  push:
+    branches:
+      - main
+      - a11y/gallery-lightbox-focus-20261024
+    paths:
+      - portfolio.html
+      - assets/js/gallery.js
+      - assets/css/petals-and-frames.css
+      - scripts/test_gallery.cjs
+      - .github/workflows/gallery-qa.yml
+  pull_request:
+    branches: [main]
+    paths:
+      - portfolio.html
+      - assets/js/gallery.js
+      - assets/css/petals-and-frames.css
+      - scripts/test_gallery.cjs
+      - .github/workflows/gallery-qa.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  gallery-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+      - name: Install pinned browser QA runner outside site source
+        run: |
+          npm install --prefix /tmp/petal-gallery-test --no-save --no-audit --no-fund playwright@1.56.1
+          /tmp/petal-gallery-test/node_modules/.bin/playwright install chromium
+      - name: Check gallery JavaScript syntax
+        run: |
+          node --check assets/js/gallery.js
+          node --check scripts/test_gallery.cjs
+      - name: Exercise gallery locally, without submitting forms
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/petal-qa.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" || true' EXIT
+          sleep 2
+          NODE_PATH=/tmp/petal-gallery-test/node_modules node scripts/test_gallery.cjs

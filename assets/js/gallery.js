@@ -38,6 +38,7 @@ const galleryItems = [
 
 let currentItems = [...galleryItems];
 let currentIndex = 0;
+let previousFocus = null;
 
 function renderGallery() {
   const galleryRoot = document.querySelector('[data-gallery]');
@@ -109,23 +110,52 @@ function createLightbox() {
 
   document.addEventListener('keydown', event => {
     if (!document.body.classList.contains('lightbox-open')) return;
-    if (event.key === 'Escape') closeLightbox();
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      closeLightbox();
+      return;
+    }
     if (event.key === 'ArrowLeft') moveLightbox(-1);
     if (event.key === 'ArrowRight') moveLightbox(1);
+    if (event.key === 'Tab') {
+      const buttons = [...document.querySelectorAll('.lightbox-dialog button')]
+        .filter(button => !button.disabled && button.getClientRects().length > 0);
+      if (!buttons.length) return;
+      const first = buttons[0];
+      const last = buttons[buttons.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
   });
 }
 
 function openLightbox(index) {
   createLightbox();
+  previousFocus = document.activeElement;
   currentIndex = index;
   updateLightbox();
   document.body.classList.add('lightbox-open');
-  document.querySelector('.lightbox').setAttribute('aria-hidden', 'false');
+  const lightbox = document.querySelector('.lightbox');
+  lightbox.setAttribute('aria-hidden', 'false');
+  // Defer focus until the opener's click finishes. A timer also runs when
+  // requestAnimationFrame is throttled in an unfocused browser tab.
+  setTimeout(() => {
+    if (lightbox.getAttribute('aria-hidden') === 'false') {
+      lightbox.querySelector('button[data-lightbox-close]').focus({ preventScroll: true });
+    }
+  }, 0);
 }
 
 function closeLightbox() {
   document.body.classList.remove('lightbox-open');
   document.querySelector('.lightbox')?.setAttribute('aria-hidden', 'true');
+  if (previousFocus?.isConnected) previousFocus.focus();
+  previousFocus = null;
 }
 
 function moveLightbox(direction) {
