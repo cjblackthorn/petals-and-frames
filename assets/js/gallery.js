@@ -142,12 +142,13 @@ function openLightbox(index) {
   document.body.classList.add('lightbox-open');
   const lightbox = document.querySelector('.lightbox');
   lightbox.setAttribute('aria-hidden', 'false');
-  // Wait until the newly revealed dialog participates in layout before focusing.
-  requestAnimationFrame(() => {
+  // Defer focus until the opener's click finishes. A timer also runs when
+  // requestAnimationFrame is throttled in an unfocused browser tab.
+  setTimeout(() => {
     if (lightbox.getAttribute('aria-hidden') === 'false') {
-      lightbox.querySelector('[data-lightbox-close]').focus();
+      lightbox.querySelector('[data-lightbox-close]').focus({ preventScroll: true });
     }
-  });
+  }, 0);
 }
 
 function closeLightbox() {
