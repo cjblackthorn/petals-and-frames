@@ -142,7 +142,12 @@ function openLightbox(index) {
   document.body.classList.add('lightbox-open');
   const lightbox = document.querySelector('.lightbox');
   lightbox.setAttribute('aria-hidden', 'false');
-  lightbox.querySelector('[data-lightbox-close]').focus();
+  // Wait until the newly revealed dialog participates in layout before focusing.
+  requestAnimationFrame(() => {
+    if (lightbox.getAttribute('aria-hidden') === 'false') {
+      lightbox.querySelector('[data-lightbox-close]').focus();
+    }
+  });
 }
 
 function closeLightbox() {
