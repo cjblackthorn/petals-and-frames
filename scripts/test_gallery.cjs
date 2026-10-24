@@ -17,6 +17,7 @@ async function testViewport(browser, mobile) {
   const dialog = page.locator(".lightbox");
   assert.equal(await dialog.getAttribute("aria-hidden"), "false");
   assert.equal(await page.locator(".lightbox-dialog").getAttribute("aria-modal"), "true");
+  await page.waitForFunction(() => document.activeElement?.matches(".lightbox-close"), { timeout: 3000 });
   assert.equal(await page.locator(".lightbox-close").evaluate(el => document.activeElement === el), true);
   assert.equal(await page.locator(".lightbox-caption h3").innerText(), "Burgundy Snow Portrait");
 
