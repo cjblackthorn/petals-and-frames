@@ -146,7 +146,7 @@ function openLightbox(index) {
   // requestAnimationFrame is throttled in an unfocused browser tab.
   setTimeout(() => {
     if (lightbox.getAttribute('aria-hidden') === 'false') {
-      lightbox.querySelector('[data-lightbox-close]').focus({ preventScroll: true });
+      lightbox.querySelector('button[data-lightbox-close]').focus({ preventScroll: true });
     }
   }, 0);
 }
